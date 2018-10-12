@@ -4,16 +4,13 @@ practice on leetcode
 ##### 队列、栈
 ##### hash(哈希)
 ##### 数组、链表
+138[M].[Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
 ##### 跳表
 ##### 字典树
 208[M].[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)  
 211[M].[Add and Search Word - Data structure design](https://leetcode.com/problems/add-and-search-word-data-structure-design/)  
 ##### 位图(bitmap)
 ##### 树
-##### 其他
-73[M].[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)  
-771[E].[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)  
-二次遍历  
 ##### 排序
 ##### 查找
 35[E].[Search Insert Position](https://leetcode.com/problems/search-insert-position/)  
@@ -31,3 +28,7 @@ M2:
 ##### 布隆过滤器
 ##### 并查集
 ##### 图论
+##### 其他
+73[M].[Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)  
+771[E].[Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)  
+二次遍历  

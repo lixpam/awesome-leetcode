@@ -137,13 +137,12 @@ Node* getSingleListLoopFirstNode(Node *root) {
     }
     if (!isLoop) return NULL;
 
-    Node *troot = p1->next;
-    p1->next = NULL;
-
-    Node *result = get2SingleListFirstCross(root, troot);
-    p1->next = troot;
-
-    return result;
+    Node *tmp = root;
+    while (tmp != p1) {
+        tmp = tmp->next;
+        p1 = p1->next;
+    }
+    return tmp;
 }
 
 int main()

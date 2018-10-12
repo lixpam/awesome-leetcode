@@ -5,6 +5,7 @@ practice on leetcode
 ##### hash(哈希)
 ##### 数组、链表
 138[M].[Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+143[M].[Reorder List](https://leetcode.com/problems/reorder-list/)
 ##### 跳表
 ##### 字典树
 208[M].[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)  

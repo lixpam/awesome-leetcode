@@ -4,9 +4,11 @@ practice on leetcode
 ##### 队列、栈
 ##### hash(哈希)
 ##### 数组、链表
+82[M].[Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 138[M].[Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
 142[M].[Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 143[M].[Reorder List](https://leetcode.com/problems/reorder-list/)
+148[M].[Sort List](https://leetcode.com/problems/sort-list/)
 ##### 跳表
 ##### 字典树
 208[M].[Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)  

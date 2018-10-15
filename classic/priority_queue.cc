@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 
-struct HeapStruct
-{
+struct HeapStruct {
     int size;
     int cap;
     int *elem;
@@ -21,6 +20,7 @@ bool pqIsEmpty(PriorityQueue hp)
     return hp->size == 0;
 }
 
+// 初始化堆，使用数组实现
 PriorityQueue initHeap(int max)
 {
     PriorityQueue hp = (PriorityQueue)malloc(sizeof(struct HeapStruct));
@@ -65,7 +65,7 @@ int deleteMin(PriorityQueue hp, int val)
     {
         child = i*2;
         if (child < hp->size && hp->elem[child] > hp->elem[child+1])
-            child ++;
+            child++;
         if (hp->elem[child] < last)
             hp->elem[i] = hp->elem[child];
         else

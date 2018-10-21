@@ -31,15 +31,17 @@ public:
         if (n->cnt != 1) {
             auto &f = freqlist[n->cnt-1];
             f.erase(n->val);
-            
-            f = freqlist[n->cnt];
-            f.insert(n->val);
+            if (f.size() == 0) {
+                freqlist.erase(n->cnt-1);
+            }
         }
+        auto &f1 = freqlist[n->cnt];
+        f1.insert(n->val);
     }
     
     int pop() {
         auto &fl = freqlist.begin()->second;
-        for (auto b = elems.rbegin(); b != elems.rend(); --b) {
+        for (auto b = elems.rbegin(); b != elems.rend(); ++b) {
             int val = (*b)->val;
             int cnt = (*b)->cnt;
             if (fl.find(val) != fl.end()) {
@@ -49,9 +51,10 @@ public:
                     freqlist.erase(cnt);
                 }
                 (*b)->cnt--;
+                cnt--;
                 elems.erase((++b).base());
-                if ((*b)->cnt > 0) {
-                    freqlist[(*b)->cnt].insert(val);
+                if (cnt > 0) {
+                    freqlist[cnt].insert(val);
                 } else {
                     val2node.erase(val);
                 }
@@ -76,5 +79,8 @@ int main()
     fs.push(4);
     fs.push(5);
 
+    cout << fs.pop() << endl;
+    cout << fs.pop() << endl;
+    cout << fs.pop() << endl;
     cout << fs.pop() << endl;
 }

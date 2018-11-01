@@ -22,7 +22,11 @@ practice on leetcode
 179[M].[Largest Number](https://leetcode.com/problems/largest-number/)
 ##### 查找
 35[E].[Search Insert Position](https://leetcode.com/problems/search-insert-position/)  
-二分查找
+二分查找  
+852[E].[Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)  
+binary search  
+349[E].[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/submissions/)  
+binary search  
 ##### 动态规划
 64[M].[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)  
 ##### 分治、递归、回溯

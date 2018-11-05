@@ -19,7 +19,11 @@ static const int _=[](){
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        int rowmin = 0, colmin = 0, rowmax = matrix.size()-1, colmax = matrix[0].size()-1;
+        int rowmin = 0, colmin = 0;
+        int rowmax = matrix.size()-1;
+        if (rowmax < 0) return {};
+        int colmax = matrix[0].size()-1;
+        if (colmax < 0) return {};
 
         int total = (rowmax+1)* (colmax+1);
         vector<int> ret(total, 0);

@@ -2,11 +2,11 @@
 #!-*- coding:utf-8 -*-
 
 '''
-write follow two lines to .bashr
+add follow two lines to .bashrc
 export LETC='/path/to/local/leetcode'
 alias glc='_(){ cd $LETC/src && python ../tools/gen_template.py $1 && vi $1.cc +20;  }; _'
 
-then you can use 'glc 880' in anywhere, 880 is title of leetcode
+then you can use 'glc 880' in anywhere, 880 is title's number of leetcode
 '''
 
 import sys
@@ -40,7 +40,7 @@ int main()  {
 '''
 
 def help():
-    print "pyton gen_template.py title"
+    print "pyton gen_template.py title_number"
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:

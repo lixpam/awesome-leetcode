@@ -27,35 +27,31 @@ public:
 
         int total = (rowmax+1)* (colmax+1);
         vector<int> ret(total, 0);
-        int x = 0, y = 0, pos = 0;
+        int x = 0, y = -1, pos = 0;
         while (pos < total) {
-            while (y <= colmax) {
+            while (++y <= colmax) {
                 ret[pos++] = matrix[x][y];
-                y++;
             }
+            if (pos >= total) break;
             y--;
-            x++;
             rowmin++;
-            while (x <= rowmax) {
+            while (++x <= rowmax) {
                 ret[pos++] = matrix[x][y];
-                x++;
             }
+            if (pos >= total) break;
             x--;
-            y--;
             colmax--;
-            while (y >= colmin) {
+            while (--y >= colmin) {
                 ret[pos++] = matrix[x][y];
-                y--;
             }
+            if (pos >= total) break;
             y++;
-            x--;
             rowmax--;
-            while (x >= rowmin) {
+            while (--x >= rowmin) {
                 ret[pos++] = matrix[x][y];
-                x--;
             }
+            if (pos >= total) break;
             x++;
-            y++;
             colmin++;
         }
         return ret;
@@ -65,9 +61,16 @@ public:
 int main()  {
     Solution s;
     vector<vector<int>> mt = {
-        {1,2,3,4},
-        {5,6,7,8},
-        {9,10,11,12}
+        {1},
+        {2},
+        {3},
+        {4},
+        {5},
+        {6},
+        {7},
+        {8},
+        {9},
+        {10},
     };
 
     vector<int> ret = s.spiralOrder(mt);

@@ -49,7 +49,7 @@ void insert(PriorityQueue hp, int val)
     hp->elem[i] = val;
 }
 
-int deleteMin(PriorityQueue hp, int val)
+int deleteMin(PriorityQueue hp)
 {
     if (pqIsEmpty(hp))
     {
@@ -61,7 +61,7 @@ int deleteMin(PriorityQueue hp, int val)
     int min = hp->elem[1];
     int last = hp->elem[hp->size--];
     int i = 1, child;
-    for (; i*2 < hp->size; i=child)
+    for (; i*2 <= hp->size; i=child)
     {
         child = i*2;
         if (child < hp->size && hp->elem[child] > hp->elem[child+1])
@@ -79,7 +79,7 @@ int deleteMin(PriorityQueue hp, int val)
 
 int main()
 {
-    int a[] = {5,4,3,2,1};
+    int a[] = {4,3,2,6,1};
     int len = sizeof(a)/sizeof(int);
 
     PriorityQueue hp = initHeap(5);
@@ -87,9 +87,9 @@ int main()
     {
         insert(hp, a[i]);
     }
-    for (int i = 1; i <= hp->size; ++i)
+    for (int i = 1; i <= 5; ++i)
     {
-        printf("%d ", hp->elem[i]);
+        printf("%d ", deleteMin(hp));
     }
     printf("\n");
     return 0;

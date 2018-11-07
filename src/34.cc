@@ -22,6 +22,8 @@ class Solution {
 public:
     bool findIndex(vector<int> &nums, int start, int end, int target, int &lp, int &rp) {
         if (start > end) return false;
+        // for array is asc
+        if (target < nums[start] || nums[end] < target) return false;
         if (start == end) {
             if (nums[start] == target) {
                 lp = rp = start;

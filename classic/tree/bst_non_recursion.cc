@@ -108,29 +108,66 @@ void prevTraverse(Node *root) {
     }
 }
 
+// 中序遍历
+// 非递归版本
+// 从根节点p开始
+// 1. 如果p有左节点，将P入栈，将p的左节点设置当前节点，重复此步骤
+// 2. 如果P的左节点为空，输入P节点，并将右节点设置成当前节点，看是否为空
+// 3. 如果不为空，重复1，2
+// 4. 如果为空，弹出栈顶，并输出，并将栈的右节点设置成当前节点，看是否为空，重复3，4
+// 5. 直到当前节点p为null且栈为空，结束遍历
+
 void inTraverse(Node *root) {
     if (!root) return;
 
     stack<Node*> q;
-    if (root->right) q.push(root->right);
-    q.push(root);
-    if (root->left) q.push(root->left);
-
-    while (!q.empty()) {
-        Node * curr = q.top();
+    Node *p = root;
+    while (p || !q.empty()) {
+        if (p->left) {
+            q.push(p);
+            p = p->left;
+        } else {
+            cout << p->val << " ";
+            p = p->right;
+            while (!p && !q.empty()) {
+                p = q.top();
+                q.pop();
+                cout << p->val << " ";
+                p = p->right;
+            }
+        }
     }
-
-    inTraverse(root->left);
-    cout << root->val << " ";
-    inTraverse(root->right);
 }
 
+// 后序遍历
+// 1. 将节点入栈
+// 2. 若P不存在左右孩子，或者P存在左右孩子，但左右孩子已经被输出，则直接输入P，将其出栈，并将此时P标记为上个输出的节点，在将此时栈顶设置为当前节点
+// 3. 如果不满足2，将p右孩子和左孩子依次入栈，并将当前节点重新设置为栈顶节点，重复2
+// 4. 栈空，结束
 void postTraverse(Node *root) {
     if (!root) return;
 
-    postTraverse(root->left);
-    postTraverse(root->right);
-    cout << root->val << " ";
+    Node *curr = NULL, *prev = NULL;
+
+    stack<Node*> q;
+    q.push(root);
+    while (!q.empty()) {
+        Node *curr = q.top();
+        if ((curr->left == NULL && curr->right == NULL)
+            || (prev != NULL && (curr->left == prev || curr->right == prev)))
+        {
+            cout << curr->val << " ";
+            q.pop();
+            prev = curr;
+        } else {
+            if (curr->right) {
+                q.push(curr->right);
+            }
+            if (curr->left) {
+                q.push(curr->left);
+            }
+        }
+    }
 }
 
 void levelTraverse(Node *root) {
@@ -161,10 +198,5 @@ int main()
     cout << endl;
     postTraverse(root);
     cout << endl;
-    levelTraverse(root);
-    cout << endl;
-
-    //deleteNode(root, 5);
-    //levelTraverse(root);
-    //cout << endl;
+    return 0;
 }

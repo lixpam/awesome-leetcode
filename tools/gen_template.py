@@ -4,7 +4,7 @@
 '''
 add follow two lines to .bashrc
 export LETC='/path/to/local/leetcode'
-alias glc='_(){ cd $LETC/src && python ../tools/gen_template.py $1 && vi $1.cc +20;  }; _'
+alias glc='_(){ cd $LETC/src && python ../tools/gen_template.py $1 && vi $1.cc +11;  }; _'
 
 then you can use 'glc 880' in anywhere, 880 is title's number of leetcode
 '''
@@ -12,16 +12,7 @@ then you can use 'glc 880' in anywhere, 880 is title's number of leetcode
 import sys
 import os
 
-template ='''#include <iostream>
-#include <vector>
-#include <queue>
-#include <stack>
-#include <list>
-#include <algorithm>
-#include <unordered_map>
-#include <map>
-#include <set>
-#include <unordered_set>
+template ='''#include "../tools/luban.h"
 using namespace std;
 
 static const int _=[](){

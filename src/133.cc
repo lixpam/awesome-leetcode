@@ -18,15 +18,33 @@ public:
     UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
         if (!node) return nullptr;
 
-        UndirectedGraphNode *nn = new UndirectedGraphNode(node->label);
+        if (nodes.find(node) == nodes.end()) {
+            nodes[node] = new UndirectedGraphNode(node->label);
+            int len = node->neighbors.size();
+            (nodes[node])->neighbors.assign(len, nullptr);
 
-        for (auto it : node->neighbors) {
-            nn->neighbors.push_back(cloneGraph(it));
+            for (int i = 0; i < len; ++i) {
+                (nodes[node])->neighbors[i] = cloneGraph(node->neighbors[i]);
+            }
         }
-        
-        return nn;
+        return nodes[node];
+    }
+private:
+    unordered_map<UndirectedGraphNode*, UndirectedGraphNode*> nodes;
 };
 
 int main()  {
     Solution s;
+
+    UndirectedGraphNode root{0};
+    UndirectedGraphNode node1{1};
+    UndirectedGraphNode node2{2};
+    root.neighbors.push_back(&node1);
+    root.neighbors.push_back(&node2);
+    node1.neighbors.push_back(&node2);
+    node2.neighbors.push_back(&node2);
+
+    UndirectedGraphNode *clone = s.cloneGraph(&root);
+
+    return 0;
 }

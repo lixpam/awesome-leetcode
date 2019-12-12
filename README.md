@@ -1,7 +1,8 @@
 # awesome-leetcode
 practice on leetcode
 ##### sliding window
-1004[M].[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+1004[M].[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)  
+1052[M]. [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/)
 ##### 队列、栈
 ##### hash(哈希)
 ##### 数组、链表

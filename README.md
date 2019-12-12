@@ -1,6 +1,7 @@
 # awesome-leetcode
 practice on leetcode
-
+##### sliding window
+1004[M].[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
 ##### 队列、栈
 ##### hash(哈希)
 ##### 数组、链表

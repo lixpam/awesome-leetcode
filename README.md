@@ -3,6 +3,7 @@ practice on leetcode
 ##### sliding window
 1004[M].[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)  
 1052[M]. [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/)
+1208[M]. [Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget/)
 ##### 队列、栈
 ##### hash(哈希)
 ##### 数组、链表

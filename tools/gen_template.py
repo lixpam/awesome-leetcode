@@ -31,7 +31,7 @@ int main()  {
 '''
 
 def help():
-    print "pyton gen_template.py title_number"
+    print("python gen_template.py title_number")
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:

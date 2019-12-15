@@ -31,7 +31,14 @@ binary search
 349[E].[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/submissions/)  
 binary search  
 ##### 动态规划
+53[S].[最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 64[M].[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)  
+70[S].[爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) 
+198[S].[打家劫舍](https://leetcode-cn.com/problems/house-robber/)
+303[S].[区域和检索-数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/)
+392[S].[判断子序列](https://leetcode-cn.com/problems/is-subsequence/)
+746[S].[使用最小花费爬梯子](https://leetcode-cn.com/problems/min-cost-climbing-stairs/)
+1025[S].[除数博弈](https://leetcode-cn.com/problems/divisor-game/)
 ##### 分治、递归、回溯
 ##### 深度优先搜索(DFS)
 79[M].[Word Search](https://leetcode.com/problems/word-search/)  

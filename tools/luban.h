@@ -12,6 +12,7 @@
 #include <set>
 #include <unordered_set>
 #include <limits.h>
+#include <math.h>
 
 using veci = std::vector<int>;
 using vecs = std::vector<std::string>;

@@ -4,6 +4,10 @@ practice on leetcode
 1004[M].[Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)  
 1052[M]. [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/)
 1208[M]. [Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget/)
+##### 双指针
+26[S].[删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)  
+27[S].[移除元素](https://leetcode-cn.com/problems/remove-element/)  
+977[S].[有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)    
 ##### 队列、栈
 ##### hash(哈希)
 ##### 数组、链表

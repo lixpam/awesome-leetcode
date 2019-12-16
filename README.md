@@ -5,6 +5,8 @@ practice on leetcode
 1052[M]. [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/)
 1208[M]. [Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget/)
 ##### 双指针
+16[M][N].[最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)   
+75[M][Y/O].[颜色分类](https://leetcode-cn.com/problems/sort-colors/)   
 26[S].[删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)  
 27[S].[移除元素](https://leetcode-cn.com/problems/remove-element/)  
 977[S].[有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)    

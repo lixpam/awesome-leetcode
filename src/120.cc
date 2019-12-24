@@ -59,6 +59,38 @@ public:
     }
 };
 
+/*
+class Solution {
+public:
+    int minimumTotal(vector<vector<int>>& triangle) {
+        vector<vector<int>> dp;
+        for (auto &iter : triangle) {
+            dp.push_back(vector<int>(iter.size(), 0));
+        }
+        int size = triangle.size();
+        if (size == 0) return 0;
+
+        dp[0][0] = triangle[0][0];
+        for (int i = 1; i < size; ++i) {
+            int row = triangle[i].size();
+            dp[i][0] = dp[i-1][0] + triangle[i][0];
+            if (row > triangle[i-1].size()) {
+                dp[i][row-1] = dp[i-1][row-2] + triangle[i][row-1];
+                row--;
+            }
+            for (int j = 1; j < row; ++j){
+                dp[i][j] = min(dp[i-1][j-1], dp[i-1][j]) + triangle[i][j];
+            }
+        }
+        int _min = INT_MAX;
+        for (auto &iter : dp[size-1]) {
+            _min = min(_min, iter);
+        }
+        return _min;
+    }
+};
+*/
+
 int main()  {
     Solution s;
     vector<vector<int>> p = {

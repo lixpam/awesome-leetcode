@@ -40,7 +40,7 @@ void insert(PriorityQueue hp, int val)
         return;
     }
 
-    // 上溯
+    // 上溯, 默认小堆
     int i = 0;
     for (i = ++hp->size; hp->elem[i/2] > val; i /= 2)
     {

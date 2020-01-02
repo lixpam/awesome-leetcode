@@ -7,59 +7,22 @@ static const int _=[](){
     return 0;
 }();
 
-/*
 class Solution {
 public:
     int trap(vector<int>& nums) {
-        int l = 0, r = nums.size()-1;
-        if (r <=1) return 0;
-
-        int sum = 0;
-        while (l < r) {
-            while (l<r && nums[l] <= nums[l+1]) l++;
-            while (l<r && nums[r-1] >= nums[r]) r--;
-
-            int p = l+1;
-            for (; p<r; ++p) {
-                if (nums[p] >= nums[l]) break;
-            }
-            while (l<p && nums[l] > nums[p] && nums[l+1]>nums[p]) l++;
-
-            sum += (p-l-1)*min(nums[l], nums[p]);
-            sum -= accumulate(nums.begin()+l+1, nums.begin()+p, 0);
-            l = p;
+        int len = nums.size();
+        vector<int> max_left(nums), max_right(nums);
+        for (int i = 1; i <len; ++i) {
+            max_left[i] = max(max_left[i-1], max_left[i]);
         }
-        return sum;
-    }
-};
-*/
-
-class Solution {
-public:
-    int trap(vector<int>& nums) {
-        int l = 0, r = nums.size()-1;
-        if (r <=1) return 0;
-
-        int sum = 0;
-        while (l < r) {
-            while (l<r && nums[l] <= nums[l+1]) l++;
-            //while (l<r && nums[r-1] >= nums[r]) r--;
-
-            int p = l+1;
-            for (; p<r; ++p) {
-                if (nums[p] > nums[p-1]) break;
-            }
-            for (; p<r; ++p) {
-                if (nums[p] > nums[p+1]) break;
-            }
-            while (l<p && nums[l] > nums[p] && nums[l+1]>nums[p]) l++;
-            
-            sum += (p-l-1)*min(nums[l], nums[p]);
-            sum -= accumulate(nums.begin()+l+1, nums.begin()+p, 0);
-            cout << l << "->" << p << " " << sum << endl;
-            l = p;
+        for (int i = len-2; i >= 0; --i) {
+            max_right[i] = max(max_right[i+1], max_right[i]);
         }
-        return sum;
+        int cnt = 0;
+        for (int i = 0; i <len; ++i){
+            cnt += min(max_left[i], max_right[i]) - nums[i];
+        }
+        return cnt;
     }
 };
 
